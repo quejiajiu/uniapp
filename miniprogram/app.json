@@ -34,7 +34,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#FBFDFE",
-    "navigationBarTitleText": "小推车科技",
+    "navigationBarTitleText": "weapp",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
