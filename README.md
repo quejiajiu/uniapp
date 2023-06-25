@@ -1,2 +1,2 @@
-# xtc-weapp
+# weapp
 
