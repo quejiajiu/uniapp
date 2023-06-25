@@ -1,0 +1,5 @@
+
+build/
+**/miniprogram_npm:
+miniprogram_npm/
+node_modules/

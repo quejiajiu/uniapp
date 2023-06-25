@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="ub ub-ver ub-cc container">
+  <view class="ub ub-ver ub-cc userinfo" wx:if="{{isAdmin}}">
+    <view class="userinfo-avatar">
+      <image class="adminAvatar" src="../../images/icon_avatar.png" mode="" />
+    </view>
+    <view class="userName">管理员</view>
+  </view>
+  <view class="userinfo" wx:else>
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="ub ub-cc">
+    <view class="ub ub-pa actionBox">
+      <view class="ub ub-ver ub-ac ub-pc bnt" bindtap="toList">
+        <view class="icon">
+          <cover-image src="../../images/icon_register.png"></cover-image>
+        </view>
+        <view> 登记列表 </view>
+      </view>
+      <view class="ub ub-ver ub-ac ub-pc bnt" bindtap="exitApp">
+        <view class="icon">
+          <cover-image src="../../images/icon_exit.png"></cover-image>
+        </view>
+        <view> 退出 </view>
+      </view>
+    </view>
+  </view>
+
+</view>

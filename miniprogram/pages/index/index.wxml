@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    师傅，您的到来，是我们的期待，欢迎加入小推车科技集团人才池中，实现商用车司机“驾有所车、运有所货、劳可多得、安可得保”的愿景！
+  </view>
+  <view class="ub ub-ver ub-pc ub-ac actionBox">
+    <button round class="btn bk-btn" bindtap="toPage" data-index="0">{{hasRegister ? '修改登记':'开始登记'}}</button>
+    <button round class="btn bk-btn" bindtap="toPage" data-index="1">帮TA登记</button>
+    <button round class="btn bk-btn" bindtap="toPage" data-index="2" wx:if="{{isAdmin && !isVisitor}}">司机列表</button>
+    <block wx:if="{{isVisitor}}">
+      <button round class="btn bk-btn" bindtap="toPage" data-index="3">司机信息</button>
+      <view class="num" wx:if="{{total}}">当前已登记{{total}}</view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/login/index.wxml-->
+<view class="ub ub-ver container">
+  <view class="ub ub-pc logo">
+    <image src="../../images/logo.png" mode="" />
+  </view>
+  <view class="ub ub-ver ub-pc ub-f1 btnAction">
+    <view>
+      <button class="primary" bindtap="submit">司机一键登录</button>
+      <view class="ub ub-pc account" bindtap="toAccountLogin">管理员入口</view>
+    </view>
+  </view>
+  <label for="weuiAgree">
+    <view class="ub checkedBox">
+      <view class="checked">
+        <checkbox-group bindchange="checkboxChange">
+          <checkbox id="weuiAgree" value="agree" checked="{{isAgree}}" />
+        </checkbox-group>
+      </view>
+      <view class="ub txt">
+        <text>已阅读并同意</text>
+        <text class="n" catchtap="toUserServer" data-index="1">《用户协议》</text>
+        <text>和</text>
+        <text class="n" catchtap="toUserServer" data-index="2">《隐私政策》</text>
+      </view>
+
+    </view>
+  </label>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "司机列表",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index"
+  }
+}

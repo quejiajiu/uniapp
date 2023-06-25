@@ -1,0 +1,4 @@
+<!--pages/userAgreement/index.wxml-->
+<view class="container">
+  <rich-text nodes="{{text}}"></rich-text>
+</view>

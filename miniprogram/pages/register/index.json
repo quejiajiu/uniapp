@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "司机信息",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-field": "@vant/weapp/field/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "signature": "../../components/signature/index"
+  }
+}

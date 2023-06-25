@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/agree/index",
+    "pages/login/index",
+    "pages/index/index",
+    "pages/my/index",
+    "pages/register/index",
+    "pages/registerList/index",
+    "pages/userAgreement/index",
+    "pages/login/account",
+    "pages/virtualList/index"
+  ],
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#03a9f4",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_act.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/icon_my.png",
+        "selectedIconPath": "images/icon_my_act.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FBFDFE",
+    "navigationBarTitleText": "小推车科技",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

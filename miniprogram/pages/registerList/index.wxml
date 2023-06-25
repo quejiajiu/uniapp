@@ -1,0 +1,38 @@
+<!--pages/registerList/index.wxml-->
+<scroll-view class="scrollView" scroll-y enable-flex refresher-enabled bindrefresherrefresh="downRefresh" bindscrolltolower="onReachLoad" refresher-triggered="{{refreshing}}" 	scroll-top="{{scrollTop}}">
+  <view class="ub ub-ac item" wx:for="{{list}}" wx:key="*this" bindtap="toDatail" data-id="{{item.id}}">
+    <view class="ub ub-ver ub-f1">
+      <view class="name">{{item.name}}</view>
+      <view class="ub ub-ac base">
+        <text>性别：{{item.gender}}</text>
+        <view class="tagLine"></view>
+        <text>年龄：{{item.age}}</text>
+        <view class="tagLine"></view>
+        <text>驾龄：{{item.drivingYear}}年</text>
+      </view>
+      <view class="ub">
+        <view class="ub sub">
+          <text class="n">准驾车型：</text>
+          <text>{{item.drivingType}}</text>
+        </view>
+        <view class="ub sub">
+          <text class="n">驾照分数：</text>
+          <text>{{item.score}}</text>
+        </view>
+      </view>
+    </view>
+    <van-icon name="arrow" size="30rpx" color="#666" />
+  </view>
+  <view class="ub ub-cc bomTxt" wx:if="{{list.length}}">
+    <view hidden="{{!loading}}">正在加载...</view>
+    <view hidden="{{!loaded}}">已加载全部</view>
+  </view>
+  <view wx:else class="ub ub-cc noData">暂无数据</view>
+</scroll-view>
+<movable-area class="moveBox">
+  <movable-view direction="all" out-of-bounds>
+    <picker bindchange="driveOnChange" range="{{driveList}}" value="{{ drive }}" header-text="准驾车型">
+      <image class="img" src="../../images/icon_search.png" mode="" />
+    </picker>
+  </movable-view>
+</movable-area>

@@ -1,0 +1,36 @@
+<!--pages/virtualList/index.wxml-->
+<view class="contant">
+  <view class="bk"></view>
+  <view class="unserInfo">
+    <view class="name">{{item.name}}</view>
+    <view class="ub other">
+      <view class="sex"> 性别：{{item.gender}} </view>
+      <view class="age"> 年龄：{{item.age}}岁 </view>
+    </view>
+    <view class="remark">货运资格证，{{item.drivingType}}证件齐全</view>
+  </view>
+  <view class="infoMain">
+    <view class="tit">职业信息</view>
+    <view class="ub subTxt">
+      <view class="n">工作年限</view>
+      <view class="f">:</view>
+      <view class="t"> {{item.drivingYear}}年及以上</view>
+    </view>
+    <view class="ub subTxt">
+      <view class="n">驾照</view>
+      <view class="f">:</view>
+      <view class="t"> {{item.drivingType}} </view>
+    </view>
+    <view class="ub subTxt">
+      <view class="n">驾照分数</view>
+      <view class="f">:</view>
+      <view class="t"> {{item.score}} </view>
+    </view>
+    <view class="ub ub-ac subTxt">
+      <view class="n"> 证件信息</view>
+      <view class="f">:</view>
+      <view class="btn">机动车驾驶证</view>
+      <view class="btn">货运资格证</view>
+    </view>
+  </view>
+</view>

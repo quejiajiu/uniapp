@@ -1,0 +1,4 @@
+<view class="signature">
+  <canvas type="2d" id="signCanvas" class="myCanvas" bindtouchmove="move" bindtouchstart="start" binderror="error" style="width:{{width}}px;height:{{height}}px;">
+  </canvas>
+</view>

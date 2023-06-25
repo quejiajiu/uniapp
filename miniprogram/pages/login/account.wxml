@@ -1,0 +1,38 @@
+<!--pages/login/account.wxml-->
+<view class="ub ub-ver container">
+  <view class="ub ub-pc logo">
+    <image src="../../images/logo.png" mode="" />
+  </view>
+  <view class="inputBox">
+    <view class="ub ub-ac input">
+      <image src="../../images/icon_account.png" mode="" />
+      <view class="ub ub-cc ub-f1">
+        <input placeholder="请输入管理员账号" model:value="{{userName}}" bindinput="inputChange" />
+      </view>
+    </view>
+    <view class=" ub ub-ac input">
+      <image src="../../images/icon_pwd.png" mode="" />
+      <view class="ub ub-cc ub-f1">
+        <input placeholder="请输入密码" password model:value="{{passWord}}" bindinput="inputChange" />
+      </view>
+    </view>
+  </view>
+  <view class="ub-f1 btnAction">
+    <button class="primary" bindtap="submit">登录</button>
+  </view>
+  <label for="weuiAgree">
+    <view class="ub checkedBox">
+      <view class="checked">
+        <checkbox-group bindchange="checkboxChange">
+          <checkbox id="weuiAgree" value="agree" checked="{{isAgree}}" />
+        </checkbox-group>
+      </view>
+      <view class="ub txt">
+        <text>已阅读并同意</text>
+        <text class="n" catchtap="toUserServer" data-index="1">《用户协议》</text>
+        <text>和</text>
+        <text class="n" catchtap="toUserServer" data-index="1">《隐私政策》</text>
+      </view>
+    </view>
+  </label>
+</view>
